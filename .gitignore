@@ -1,0 +1,21 @@
+# OS / editor junk files
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.vscode/
+.idea/
+*.sublime-*
+
+# Common dev trash
+*.log
+*.logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log
+
+tmp/
+temp/
+.cache/
+node_modules/
