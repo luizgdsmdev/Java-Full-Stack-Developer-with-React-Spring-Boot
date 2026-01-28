@@ -13,7 +13,7 @@ const Footer = () => {
           >
             Luizgdsmdev
           </a>
-          . All rights reserved.
+          .
         </p>
       </div>
     </footer>

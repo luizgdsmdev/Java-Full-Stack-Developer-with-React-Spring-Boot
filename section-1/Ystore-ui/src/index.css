@@ -20,7 +20,6 @@
 }
 
 #root {
-  height: 100vh;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -37,33 +36,10 @@ body {
   padding: 0;
 }
 
-.home-container,
 .product-listings-container {
   max-width: 1152px;
   margin: 0 auto;
   padding: 2rem 1.5rem;
-}
-
-.page-title {
-  font-size: 1.875rem;
-  font-weight: 800;
-  text-align: center;
-  color: var(--primary-color);
-  margin-top: 1rem;
-  padding: 0.5rem 0;
-}
-
-.page-heading-container {
-  text-align: center;
-  max-width: 576px;
-  margin: 0 auto;
-  padding: 1.5rem 1rem;
-}
-
-.page-heading-paragraph {
-  font-size: 1.2rem;
-  line-height: 1.5;
-  color: #4b5563;
 }
 
 .product-card {
