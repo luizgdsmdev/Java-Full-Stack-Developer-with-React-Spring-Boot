@@ -37,7 +37,7 @@
   font-weight: 600;
   color: var(--primary-color);
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease-in-out;
 }
 
 .faIcon {
@@ -89,6 +89,7 @@
   text-decoration: none;
   transition: color 0.3s ease;
   padding: 0.7rem 0.8rem;
+  border-radius: 0.375rem;
 }
 
 .navLink:hover {
@@ -96,6 +97,7 @@
   background-color: var(--bg-hover-color);
   border-radius: 0.375rem;
   color: #ffffff;
+  transition: 0.3s ease-in-out;
 }
 
 .navLink:active,

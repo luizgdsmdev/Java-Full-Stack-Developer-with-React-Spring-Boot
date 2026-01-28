@@ -19,6 +19,16 @@
   --font-size-lg: 1.125rem;
 }
 
+#root {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
 body {
   font-family: var(--font-family);
   background-color: var(--bg-light);

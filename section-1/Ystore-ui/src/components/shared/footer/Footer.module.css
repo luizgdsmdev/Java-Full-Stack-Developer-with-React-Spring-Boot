@@ -1,0 +1,21 @@
+footer {
+  text-align: center;
+  text-align: -webkit-center;
+}
+
+.container {
+  text-align: center;
+  text-align: -webkit-center;
+  align-content: center;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.footerLink {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
