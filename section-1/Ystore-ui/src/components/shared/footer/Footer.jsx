@@ -9,6 +9,7 @@ const Footer = () => {
           <a
             href="https://github.com/luizgdsmdev"
             className={styles.footerLink}
+            target="_blank"
           >
             Luizgdsmdev
           </a>
