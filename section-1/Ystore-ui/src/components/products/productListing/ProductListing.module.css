@@ -1,0 +1,32 @@
+.productListingsContainer {
+  max-width: 1152px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.productListingsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem 1.5rem;
+  padding: 3rem 0;
+}
+
+@media (min-width: 640px) {
+  .productListingsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .productListingsGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.productListingsEmpty {
+  text-align: center;
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-lg);
+  color: var(--primary-color);
+}
