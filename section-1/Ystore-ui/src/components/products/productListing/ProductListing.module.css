@@ -1,26 +1,19 @@
 .productListingsContainer {
-  max-width: 1152px;
+  max-width: 95%;
   margin: 0 auto;
   padding: 2rem 1.5rem;
 }
 
 .productListingsGrid {
-  display: grid;
+  display: flex;
   grid-template-columns: 1fr;
   gap: 2rem 1.5rem;
-  padding: 3rem 0;
-}
-
-@media (min-width: 640px) {
-  .productListingsGrid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 1024px) {
-  .productListingsGrid {
-    grid-template-columns: repeat(3, 1fr);
-  }
+  padding: 1rem 0;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .productListingsEmpty {
