@@ -6,6 +6,22 @@ Thumbs.db
 .vscode/
 .idea/
 *.sublime-*
+*.log
+*.tmp
+*.temp
+*.swp
+*.bak
+*.orig
+*.rej
+*.patch
+*.diff
+~*
+.#*
+.idea/
+*.iml
+*.sublime-project
+*.sublime-workspace
+*.code-workspace
 
 # Common dev trash
 *.log
@@ -19,6 +35,54 @@ tmp/
 temp/
 .cache/
 node_modules/
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Backend: Spring Boot (assuming Maven or Gradle)
+Ystore-backend/target/
+Ystore-backend/build/
+Ystore-backend/.gradle/
+Ystore-backend/.mvn/
+Ystore-backend/mvnw
+Ystore-backend/mvnw.cmd
+Ystore-backend/gradlew
+Ystore-backend/gradlew.bat
+Ystore-backend/*.jar
+Ystore-backend/*.war
+Ystore-backend/*.class
+Ystore-backend/out/
+Ystore-backend/.settings/
+Ystore-backend/.classpath
+Ystore-backend/.project
+
+# Frontend: Vite/React
+Ystore-ui/node_modules/
+Ystore-ui/dist/
+Ystore-ui/build/
+Ystore-ui/.vite/
+Ystore-ui/vite.config.js.timestamp-*
+Ystore-ui/vite.config.ts.timestamp-*
+Ystore-ui/*.log
+Ystore-ui/coverage/
+Ystore-ui/.eslintcache
+
+# Other common ignores
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+pnpm-debug.log
+lerna-debug.log
+
+Explicar cada regra do gitignore
+
+Configurar GitHub Actions
+
+Tornar mais conciso
 
 # Ignore rule or common files
 section-1/commitStandart.md
