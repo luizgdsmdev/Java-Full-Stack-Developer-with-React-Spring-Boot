@@ -1,10 +1,10 @@
-package com.Ystore.demo;
+package com.Ystore.Ystore;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class DemoApplicationTests {
+class YstoreApplicationTests {
 
 	@Test
 	void contextLoads() {

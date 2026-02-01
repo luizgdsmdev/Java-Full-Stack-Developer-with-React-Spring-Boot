@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.Ystore</groupId>
-	<artifactId>demo</artifactId>
+	<artifactId>Ystore</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>demo</name>
-	<description>Demo project for Ystore using Spring Boot and React</description>
+	<name>Ystore</name>
+	<description>Ystore is a demo backend project for Spring Boot practice</description>
 	<url/>
 	<licenses>
 		<license/>
