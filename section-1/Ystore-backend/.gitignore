@@ -52,3 +52,9 @@ target/
 
 # Maven wrapper 
 .mvn/wrapper/maven-wrapper.jar
+
+# SQl files
+*.mv.db
+*.trace.db
+*.db
+*.db.*
