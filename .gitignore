@@ -92,3 +92,7 @@ data/
 *.mv.db
 *.lock.db
 *.trace.db
+
+# Ignore .env file
+section-1/Ystore-ui/src/env
+section-1/Ystore-ui/src/env.local
