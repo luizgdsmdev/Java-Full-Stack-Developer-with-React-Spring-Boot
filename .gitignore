@@ -86,3 +86,9 @@ Tornar mais conciso
 
 # Ignore rule or common files
 section-1/commitStandart.md
+
+# Ignore db files
+data/
+*.mv.db
+*.lock.db
+*.trace.db
