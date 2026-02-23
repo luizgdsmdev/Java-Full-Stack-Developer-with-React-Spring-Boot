@@ -4,3 +4,9 @@
   padding: 2rem 1.5rem;
   height: 100%;
 }
+
+@media screen and (max-width: 768px) {
+  .homeContainer {
+    padding: 0;
+  }
+}

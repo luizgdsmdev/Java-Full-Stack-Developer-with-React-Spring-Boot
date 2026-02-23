@@ -5,7 +5,7 @@ export const fetchProductsAPI = async () => {
     const response = await apiClient.get("/products");
     return Array.isArray(response.data) ? response.data : [];
   } catch (error) {
-    console.error("Error fetching products:", error);
+    console.error("Error fetching products:", error.message);
     return [];
   }
 };
