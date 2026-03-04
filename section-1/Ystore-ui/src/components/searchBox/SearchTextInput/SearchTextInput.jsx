@@ -4,7 +4,7 @@ import styles from "../SearchTextInput/SearchTextInput.module.css"
 function SearchTextInput({placeholder, value, onChange}) {
   return (
     <div className={styles.SearchBoxContainer}>
-      <input className={styles.input} type="text" placeholder={placeholder} value={value} onChange={onChange} />
+      <input id='SearchBoxInputText' className={styles.input} type="text" placeholder={placeholder} value={value} onChange={onChange} />
     </div>
   )
 }

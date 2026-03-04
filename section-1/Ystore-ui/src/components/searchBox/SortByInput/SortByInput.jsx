@@ -3,7 +3,7 @@ function SortByInput({ value, onChange }) {
    return (
     <div className={styles.sortContainer}>
       <select
-        id="sort"
+        id="SortByInputSelect"
         className={styles.sortSelect}
         value={value}
         onChange={(e) => onChange(e.target.value)}
