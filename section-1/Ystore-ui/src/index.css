@@ -6,6 +6,7 @@
   --price-color: #5925af;
   --bg-light: #f7fafc;
   --text-dark: #2d3748;
+  --text-light: #636974;
   --border-color: #d1d5db;
   --dark-border-color: #4b5563;
   --bg-hover-color: #5a21b65e;
@@ -18,6 +19,8 @@
   --font-family: "Josefin Sans", sans-serif;
   --font-weight-bold: 700;
   --font-size-lg: 1.125rem;
+  --font-size-md: 1rem;
+  --font-size-sm: 0.875rem;
 }
 
 #root {

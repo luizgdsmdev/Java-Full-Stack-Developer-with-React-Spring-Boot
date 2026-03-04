@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 import Loading from "../shared/loading/Loading";
 import Error from "../shared/error/Error";
 import NoProductsMessage from "../products/productListing/NoProductsMessage";
+import SearchBox from "../searchBox/SearchTextInput/SearchTextInput";
 
 const Home = () => {
   const [products, setProducts] = useState([]);
@@ -39,10 +40,7 @@ useEffect(() => {
 
     {!loadingEffect && (
       <>
-        <PageHeader
-          title="Explore Ystore stickers"
-          subtitle="Add a touch of creativity to your space with our wide range of fun and unique stickers. Perfect for any occasion!"
-        />
+        <PageHeader/>
 
         {errorEffect ? (
           <Error />
@@ -51,6 +49,7 @@ useEffect(() => {
         ) : (
           <ProductListing products={products} />
         )}
+        
       </>
     )}
     </div>

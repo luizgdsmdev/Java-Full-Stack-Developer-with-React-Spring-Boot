@@ -1,10 +1,13 @@
 import React from "react";
 import styles from "./ProductListing.module.css";
 import ProductCard from "../productCard/ProductCard";
+import SearchBox from "../../searchBox/SearchBox"
 
 function productListing({ products }) {
   return (
+    <>  
     <div className={styles.productListingsContainer}>
+      <SearchBox></SearchBox>
       <div className={styles.productListingsGrid}>
         {
           products.map((product) => (
@@ -13,6 +16,7 @@ function productListing({ products }) {
         )}
       </div>
     </div>
+    </>
   );
 }
 

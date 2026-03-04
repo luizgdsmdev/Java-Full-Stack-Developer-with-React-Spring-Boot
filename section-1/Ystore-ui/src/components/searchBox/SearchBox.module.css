@@ -1,0 +1,17 @@
+.productListingsSearchContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: left;
+    justify-content: space-evenly;
+    align-items: left;
+    gap: 1rem;
+    width: 100%;
+    justify-content: left;  
+}
+
+@media screen and (max-width: 890px) {
+    .productListingsSearchContainer{
+        justify-content: space-evenly;
+    }
+}

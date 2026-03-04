@@ -1,0 +1,61 @@
+.SearchBoxContainer{
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    max-width: 30rem;
+}
+
+label{
+    padding: 1rem;
+    color: var(--primary-color);
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-bold);
+}
+
+.input{
+    padding: 0.6rem 2.2rem 0.6rem 1rem;
+    font-size: var(--font-size-md);
+    border: 2px solid var(--primary-color);
+    border-radius: 0.6rem;
+    background-color: white;    
+    cursor: pointer;
+    color: var(--text-light);
+    width: 100%;
+    max-width: 11rem;
+    transition: max-width 0.3s ease-in-out;
+}
+
+input[type="text"] {
+    border: 2px solid var(--primary-color);
+    transition: max-width 0.3s ease-in-out;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border: 2px solid var(--primary-color);
+    width: 100%;
+    max-width: 100%;
+    transition: max-width 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 843px) {
+    .SearchBoxContainer{
+        max-width: 20rem;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .SearchBoxContainer{
+        max-width: 20rem;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 551px) {
+    .SearchBoxContainer{
+        width: 100%;
+        max-width: 30rem;
+        justify-content: center;
+    }
+}
