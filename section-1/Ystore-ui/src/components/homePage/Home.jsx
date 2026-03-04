@@ -1,59 +1,36 @@
+// src/components/Home.tsx (ou onde estiver)
 import styles from "./Home.module.css";
 import PageHeader from "../shared/pageHeader/PageHeader";
 import ProductListing from "../products/productListing/productListing";
-import { fetchProductsAPI } from "../../API/product/ProductFetch";
-import { useState, useEffect } from "react";
 import Loading from "../shared/loading/Loading";
 import Error from "../shared/error/Error";
 import NoProductsMessage from "../products/productListing/NoProductsMessage";
-import SearchBox from "../searchBox/SearchTextInput/SearchTextInput";
+// import SearchBox from "../searchBox/SearchTextInput/SearchTextInput"; // Comente se não usar
+
+import { useProducts } from "../../hooks/products/useProducts";
 
 const Home = () => {
-  const [products, setProducts] = useState([]);
-  const [loadingEffect, setLoadingEffect] = useState(true);
-  const [errorEffect, setErrorEffect] = useState(false);
+  const { data: products = [], isLoading, isError, error } = useProducts();
 
-  const fetchProducts = async () => {
-  setLoadingEffect(true);
-  setErrorEffect(false);
-
-  try {
-    const products = await fetchProductsAPI();
-    setProducts(products);
-  } catch (error) {
-    console.error("Products fetch went wrong:", error);
-    setErrorEffect(true);
-  } finally {
-    setLoadingEffect(false);
+  if (isLoading) {
+    return <Loading />;
   }
-};
 
-useEffect(() => {
-  fetchProducts();
-}, []);
+  if (isError) {
+    console.error("Products fetch went wrong:", error);
+    return <Error />;
+  }
+
+  if (products.length === 0) {
+    return <NoProductsMessage />;
+  }
 
   return (
-    <>
-    {loadingEffect && <Loading />}    
     <div className={styles.homeContainer}>
-
-
-    {!loadingEffect && (
-      <>
-        <PageHeader/>
-
-        {errorEffect ? (
-          <Error />
-        ) : products.length === 0 ? (
-          <NoProductsMessage />
-        ) : (
-          <ProductListing products={products} />
-        )}
-        
-      </>
-    )}
+      <PageHeader />
+      {/* <SearchBox /> */} {/* Descomente se usar */}
+      <ProductListing products={products} />
     </div>
-    </>
   );
 };
 
