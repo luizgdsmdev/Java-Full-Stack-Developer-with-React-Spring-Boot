@@ -13,7 +13,7 @@ function SearchBox() {
   return (
     <div className={styles.productListingsSearchContainer}>
       <SortByInput></SortByInput>
-      <SearchTextInput placeholder="Search for some stickers" value={searchValue} onChange={handleSearchChange} />
+      <SearchTextInput value={searchValue} onChange={handleSearchChange} />
     </div>
   )
 }
