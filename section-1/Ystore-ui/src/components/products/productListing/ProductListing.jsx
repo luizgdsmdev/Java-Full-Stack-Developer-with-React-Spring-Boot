@@ -6,14 +6,10 @@ function productListing({ products }) {
   return (
     <div className={styles.productListingsContainer}>
       <div className={styles.productListingsGrid}>
-        {products.length > 0 ? (
+        {
           products.map((product) => (
             <ProductCard key={product.productId} product={product} />
-          ))
-        ) : (
-          <p className={styles.productListingsEmpty}>
-            No stickers available for now, we're sorry {":("}
-          </p>
+          )
         )}
       </div>
     </div>

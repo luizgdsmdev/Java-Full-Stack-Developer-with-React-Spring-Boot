@@ -1,8 +1,6 @@
-import "./App.css";
-import Home from "./components/homePage/home.jsx";
+import Home from "./components/homePage/Home.jsx";
 import Footer from "./components/shared/footer/Footer.jsx";
 import Header from "./components/shared/Header/Header.jsx";
-
 function App() {
   return (
     <>
