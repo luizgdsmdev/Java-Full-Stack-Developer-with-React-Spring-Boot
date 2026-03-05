@@ -1,6 +1,5 @@
-import React from "react";
-
 function ProductPrice({ currency, price }) {
+  console.log(currency, price);
   return (
     <div>
       <span>

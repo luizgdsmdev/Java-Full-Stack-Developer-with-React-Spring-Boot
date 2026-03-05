@@ -43,7 +43,7 @@ function ProductListing({ products }) {
   }else if(sortByValue == "asc"){
     filteredProducts.sort((a, b) => a.price - b.price);
   }else{
-    filteredProducts.sort((a, b) => a.popularity - b.popularity);
+    filteredProducts.sort((a, b) => b.popularity - a.popularity);
   }
 
   return (

@@ -1,4 +1,4 @@
-import React from "react";
+import PopularityProduct from "./popularityProduct/PopularityProduct";
 import styles from "./ProductCard.module.css";
 import ProductPrice from "./ProductPrice";
 
@@ -13,11 +13,14 @@ function ProductCard({ product }) {
         />
       </div>
       <div className={styles.productCardDetails}>
-        <h4 className={styles.productCardTitle}>{product.name}</h4>
+        <div className={styles.productCardTitleContainer}>
+          <h4 className={styles.productCardTitle}>{product.name}</h4>
+          <PopularityProduct rating={product.popularity} />
+        </div>
         <p className={styles.productCardDescription}>{product.description}</p>
         <div className={styles.productCardFooter}>
           <div className={styles.productCardPrice}>
-            <ProductPrice currency={product.currency} price={product.price} />
+            <ProductPrice currency="$ " price={product.price} />
           </div>
         </div>
       </div>
