@@ -9,8 +9,8 @@ function SortByInput({ value, onChange }) {
         onChange={(e) => onChange(e.target.value)}
       >
         <option value="popularity">Popularity</option>
-        <option value="price-asc">Lowest price</option>
-        <option value="price-desc">Highest price</option>
+        <option value="asc">Lowest price</option>
+        <option value="desc">Highest price</option>
       </select>
     </div>
   );

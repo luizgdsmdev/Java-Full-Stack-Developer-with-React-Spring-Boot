@@ -1,5 +1,10 @@
+.noProductsContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .productListingsEmpty, .secondaryText {
-  margin: 7rem 0 0;
   text-align: center;
   font-family: var(--font-family);
   font-weight: var(--font-weight-bold);

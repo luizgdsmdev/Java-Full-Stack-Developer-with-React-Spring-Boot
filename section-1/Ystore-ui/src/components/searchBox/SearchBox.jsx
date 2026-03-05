@@ -1,19 +1,18 @@
-import React, { useState } from 'react'
 import SearchTextInput from "./SearchTextInput/SearchTextInput"
 import SortByInput from "./SortByInput/SortByInput"
 import styles from "./SearchBox.module.css"
 
-function SearchBox() {
-  const [searchValue, setSearchValue] = useState("")
-
-  const handleSearchChange = (e) => {
-    setSearchValue(e.target.value)
-  }
-
+function SearchBox({ searchValue, onSearchChange, sortByValue, onSortByChange }) {
   return (
     <div className={styles.productListingsSearchContainer}>
-      <SortByInput></SortByInput>
-      <SearchTextInput value={searchValue} onChange={handleSearchChange} />
+      <SortByInput 
+        value={sortByValue}
+        onChange={onSortByChange}
+      />
+      <SearchTextInput 
+        value={searchValue}
+        onChange={onSearchChange}
+      />
     </div>
   )
 }
