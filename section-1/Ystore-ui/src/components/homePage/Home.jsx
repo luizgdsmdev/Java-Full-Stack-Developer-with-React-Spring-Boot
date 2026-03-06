@@ -1,6 +1,6 @@
 import styles from "./Home.module.css";
 import PageHeader from "../shared/pageHeader/PageHeader";
-import ProductListing from "../products/productListing/productListing";
+import ProductListing from "../products/productListing/ProductListing";
 import Loading from "../shared/loading/Loading";
 import Error from "../shared/error/Error";
 import NoProductsMessage from "../products/productListing/NoProductsMessage";

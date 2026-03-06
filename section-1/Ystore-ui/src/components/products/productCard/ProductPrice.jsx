@@ -1,5 +1,4 @@
 function ProductPrice({ currency, price }) {
-  console.log(currency, price);
   return (
     <div>
       <span>

@@ -1,32 +1,31 @@
 import { FaStar, FaStarHalfAlt, FaRegStar } from 'react-icons/fa';
 
-const PopularityProduct = ({ rating }) => { // score = número de 0 a 100
-    console.log(rating);
- // 1. Garante que rating seja um número válido entre 0 e 100
+const PopularityProduct = ({ rating }) => { // score = number between 0 and 100
+ // 1. Ensure rating is a valid number between 0 and 100
   const safeRating = typeof rating === 'number' && !isNaN(rating)
-    ? Math.max(0, Math.min(100, rating))   // clamp entre 0 e 100
+    ? Math.max(0, Math.min(100, rating))   // clamp between 0 and 100
     : 0;
 
-  // 2. Converte para escala 0-5
+  // 2. Convert to scale 0-5
   const stars = safeRating / 20;  // 0 → 0, 100 → 5
 
-  // 3. Calcula as partes com segurança
-  const fullStars   = Math.floor(stars);                    // 0 a 5
-  const remainder   = stars - fullStars;                    // fração restante (0 a <1)
-  const hasHalf     = remainder >= 0.5;                     // meia estrela
-  const emptyStars  = 5 - fullStars - (hasHalf ? 1 : 0);    // sempre ≥ 0 agora
+  // 3. Calc parts with security
+  const fullStars   = Math.floor(stars);                    // 0 to 5
+  const remainder   = stars - fullStars;                    // remaining fraction (0 to <1)
+  const hasHalf     = remainder >= 0.5;                     // half star
+  const emptyStars  = 5 - fullStars - (hasHalf ? 1 : 0);    // always ≥ 0 now
 
   return (
     <div className="flex items-center gap-1 text-yellow-400 text-base mt-1 mb-2">
-      {/* Estrelas completas */}
+      {/* Full stars */}
       {[...Array(fullStars)].map((_, i) => (
         <FaStar key={`full-${i}`} />
       ))}
 
-      {/* Meia estrela */}
+      {/* Half star */}
       {hasHalf && <FaStarHalfAlt />}
 
-      {/* Estrelas vazias */}
+      {/* Empty stars */}
       {[...Array(emptyStars)].map((_, i) => (
         <FaRegStar key={`empty-${i}`} />
       ))}
