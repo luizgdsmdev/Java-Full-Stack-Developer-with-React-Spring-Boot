@@ -35,22 +35,23 @@ function ProductListing({ products }: ProductListingProps) {
   }, [products, searchTerm, sortByValue, sortProducts]);
 
   return (
-    <div className={styles.productListingsContainer}>
+    <div className={styles.listingsContainer}>
       <SearchBox
         searchValue={searchValue}
         onSearchChange={handleSearchChange}
         sortByValue={sortByValue}
         onSortByChange={handleSortChange}
       />
-
-      <div className={styles.productListingsGrid}>
-        {filteredProducts.length > 0 ? (
-          filteredProducts.map((product) => (
-            <ProductCard key={product.productId} product={product} />
-          ))
-        ) : (
-          <NoProductsMessage />
-        )}
+      <div className={styles.productListingsContainer}>
+        <div className={styles.productListingsGrid}>
+          {filteredProducts.length > 0 ? (
+            filteredProducts.map((product) => (
+              <ProductCard key={product.productId} product={product} />
+            ))
+          ) : (
+            <NoProductsMessage />
+          )}
+        </div>
       </div>
     </div>
   );
