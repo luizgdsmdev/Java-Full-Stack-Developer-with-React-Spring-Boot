@@ -21,7 +21,7 @@
 
 .pageSubtitle {
   font-size: 1.225rem;
-  color: #6b7280;
+  color: var(--text-light);
   margin: 1.3rem 0 0 0;
   line-height: 1.75rem;
 }

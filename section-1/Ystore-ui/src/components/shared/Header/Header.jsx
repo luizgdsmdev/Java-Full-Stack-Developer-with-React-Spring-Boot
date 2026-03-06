@@ -1,6 +1,7 @@
 import { faShoppingBasket, faTags } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from "./Header.module.css";
+import ThemeToggle from "./themeToogle/ThemeToggle";
 
 const Header = () => {
   return (
@@ -39,6 +40,9 @@ const Header = () => {
                   className={styles.cartIcon}
                 />
               </a>
+            </li>
+            <li>
+              <ThemeToggle />
             </li>
           </ul>
         </nav>

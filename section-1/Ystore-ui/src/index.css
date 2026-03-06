@@ -3,10 +3,13 @@
 :root {
   --primary-color: #5b21b6;
   --hover-color: #4c1d95;
-  --price-color: #5925af;
+  --price-color: rgb(91 33 182 / var(--tw-text-opacity, 1));
+  --price-color-bg: rgb(245 243 255 / var(--tw-bg-opacity, 1));
   --bg-light: #f7fafc;
+  --bg-light-toogle: #0f172a;
   --text-dark: #2d3748;
   --text-light: #636974;
+  --text-light-toogle: #ffffff;
   --border-color: #d1d5db;
   --dark-border-color: #4b5563;
   --bg-hover-color: #5a21b65e;
@@ -21,6 +24,30 @@
   --font-size-lg: 1.125rem;
   --font-size-md: 1rem;
   --font-size-sm: 0.875rem;
+}
+
+html.dark {
+  --primary-color: #8b5cf6;
+  --hover-color: #7c3aed;
+  --price-color: #fafafa;
+  --price-color-bg: #5925af5c;
+  --bg-light: #0f172a;
+  --bg-light-toogle: #636974;
+  --text-light-toogle: #0f172a;
+
+  --text-dark: #f1f5f9;
+  --text-light: #ffffff;
+
+  --border-color: #374151;
+  --dark-border-color: #6b7280;
+
+  --bg-hover-color: rgba(139, 92, 246, 0.15);
+
+  --shadow-color: rgba(0, 0, 0, 0.4);
+  --hover-shadow-color: rgba(0, 0, 0, 0.6);
+
+  --card-bg: #1e293b;
+  --dark-card-bg: #111827;
 }
 
 #root {
