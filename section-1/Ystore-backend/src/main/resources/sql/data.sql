@@ -29,7 +29,7 @@ INSERT INTO products (name, description, price, popularity, image_url, created_a
 VALUES ('My Driving Scares Me Too', 'They exist!', 5.00, 65, '/assets/stickers/MyDrivingScaresMeToo.png', CURRENT_TIMESTAMP, 'admin', NULL, NULL);
 
 INSERT INTO products (name, description, price, popularity, image_url, created_at, created_by, updated_at, updated_by)
-VALUES ('Three headed dragon symbol', 'Targaryen dynasty strength', 9.00, 98, '/assets/stickers/HouseOfTheDragonSymbol.png', CURRENT_TIMESTAMP, 'admin', NULL, NULL);
+VALUES ('Three headed dragon', 'Targaryen dynasty strength', 9.00, 98, '/assets/stickers/HouseOfTheDragonSymbol.png', CURRENT_TIMESTAMP, 'admin', NULL, NULL);
 
 INSERT INTO products (name, description, price, popularity, image_url, created_at, created_by, updated_at, updated_by)
 VALUES ('Squid Game', 'Let''s play', 5.00, 70, '/assets/stickers/SquidGame.png', CURRENT_TIMESTAMP, 'admin', NULL, NULL);
