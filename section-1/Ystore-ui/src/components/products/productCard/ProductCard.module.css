@@ -63,25 +63,25 @@
 .productCardImageContainer {
   position: relative;
   width: 100%;
-  height: 18rem;
+  height: 23rem;
   border-bottom: 1px solid var(--border-color);
 }
 
-@media (max-width: 580px) {
+@media (max-width: 1920px) {
   .productCardImageContainer {
-    height: 12rem;
+    height: 22rem;
   }
 }
 
-@media (min-width: 780px) {
+@media (max-width: 426px) {
+  .productCardImageContainer {
+    height: 19rem;
+  }
+}
+
+@media (max-width: 320px) {
   .productCardImageContainer {
     height: 15rem;
-  }
-}
-
-@media (min-width: 1025px) {
-  .productCardImageContainer {
-    height: 23rem;
   }
 }
 
