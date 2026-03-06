@@ -39,3 +39,10 @@
   opacity: 1;
   transform: translateY(0);
 }
+
+@media (max-width: 1024px) {
+  .ThemeToggle {
+    bottom: 5rem;
+    right: 2.5rem;
+  }
+}

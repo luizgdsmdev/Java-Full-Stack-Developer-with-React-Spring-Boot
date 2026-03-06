@@ -6,7 +6,7 @@ const STORAGE_KEY = "theme";
 
 export function useTheme() {
   const getInitialTheme = (): Theme => {
-    if (typeof window === "undefined") return "light";
+    if (typeof window === "undefined") return "dark";
 
     const saved = localStorage.getItem(STORAGE_KEY) as Theme | null;
     if (saved) return saved;
