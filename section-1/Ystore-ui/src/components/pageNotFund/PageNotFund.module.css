@@ -1,0 +1,19 @@
+.notFundContentContainer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: -webkit-center;
+    text-align: -moz-center;
+    text-align: center; 
+    padding-top: 5rem;   
+    gap: 2rem;
+}
+
+.homeContainer {
+  display: contents;
+}
+
+

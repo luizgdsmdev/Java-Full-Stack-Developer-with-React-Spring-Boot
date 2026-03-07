@@ -1,0 +1,103 @@
+.notFundTextMessageContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.errorTitle{
+  font-size: 2.5rem;
+  color: var(--color-primary);
+  font-weight: 300;
+  font-family: Audiowide;
+  text-shadow: 0px 0px 4px var(--color-primary);
+  /* animation: fadeInText 3s ease-in 3.5s forwards, flicker4 5s linear 7.5s infinite, hueRotate 6s ease-in-out 3s infinite; */
+}
+
+h2.errorTitle {
+  margin-bottom: 0;
+  padding: 0 2rem;
+}
+
+.errorDescriptionHomeMessage{
+  font-size: 1.2rem;
+  color: var(--color-primary);
+  font-weight: 300;
+  font-family: Audiowide;
+  text-shadow: 0px 0px 4px var(--color-primary);
+}
+
+.errorDescriptionHomeMessage{
+  padding: 1rem 2rem 3rem ;
+  margin: 0px;
+}
+
+@keyframes flicker4{
+  0%  {color: var(--color-primary);text-shadow:0px 0px 4px var(--color-primary);}
+  30% {color: var(--color-primary);text-shadow:0px 0px 4px var(--color-primary);}
+  31% {color: #ff005d;text-shadow:0px 0px 4px #ff005d;}
+  32% {color: var(--color-primary);text-shadow:0px 0px 4px var(--color-primary);}
+  36% {color: var(--color-primary);text-shadow:0px 0px 4px var(--color-primary);}
+  37% {color: #ff005d;text-shadow:0px 0px 4px #ff005d;}
+  41% {color: #ff005d;text-shadow:0px 0px 4px #ff005d;}
+  42% {color: var(--color-primary);text-shadow:0px 0px 4px var(--color-primary);}
+  85% {color: var(--color-primary);text-shadow:0px 0px 4px var(--color-primary);}
+  86% {color: #ff005d;text-shadow:0px 0px 4px #ff005d;}
+  95% {color: #ff005d;text-shadow:0px 0px 4px #ff005d;}
+  96% {color: var(--color-primary);text-shadow:0px 0px 4px var(--color-primary);}
+  100%{color: var(--color-primary);text-shadow:0px 0px 4px var(--color-primary);}
+}
+
+@keyframes fadeInText{
+  1%  {color: var(--color-text-primary);text-shadow:0px 0px 4px var(--color-text-primary);}
+  70% {color: #ff005d;text-shadow:0px 0px 14px #ff005d;}
+  100%{color: #ff005d;text-shadow:0px 0px 4px #ff005d;}
+}
+
+@keyframes hueRotate{
+  0%  {
+    filter: hue-rotate(0deg);
+  }
+  50%  {
+    filter: hue-rotate(-120deg);
+  }
+  100%  {
+    filter: hue-rotate(0deg);
+  }
+}
+
+
+.navLink {
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.6s ease-in-out;
+  padding: 0.7rem 0.8rem;
+  border-radius: 0.375rem;
+  text-decoration: underline;
+}
+
+.navLink:hover {
+  color: var(--hover-color);
+  background-color: var(--bg-hover-color);
+  border-radius: 0.375rem;
+  color: #ffffff;
+  transition: 0.3s ease-in-out;
+}
+
+.navLink.active {
+  color: var(--hover-color);
+  background-color: var(--bg-hover-color);
+  border-radius: 0.375rem;
+  color: #ffffff;
+  transition: 0.3s ease-in-out;
+}
+
+.navLink:active,
+.link:active {
+  color: var(--active-color);
+}

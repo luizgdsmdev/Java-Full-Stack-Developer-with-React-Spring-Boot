@@ -1,8 +1,15 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import App from './App.jsx'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import App from './App.jsx'
+import AboutPage from './components/about/AboutPage.jsx';
+import Contact from './components/contact/Contact.jsx';
+import Login from './components/login/Login.jsx';
+import Cart from './components/cart/Cart.jsx';
+import Home from './components/homePage/Home.jsx';
+import PageNotFund from './components/pageNotFund/PageNotFund.jsx';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -14,10 +21,42 @@ const queryClient = new QueryClient({
   },
 });
 
+const reactRouter = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+    errorElement: <PageNotFund />,
+    children: [
+      {
+        index: true,
+        element: <Home />,
+      },
+      {
+        path: "/about",
+        element: <AboutPage />,
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
+      },
+      {
+        path: "/login",
+        element: <Login />,
+      },
+      {
+        path: "/cart",
+        element: <Cart />,
+      },
+    ]
+  }
+]);
+
+
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <QueryClientProvider client={queryClient}>
-      <App />
+      <RouterProvider router={reactRouter} />
     </QueryClientProvider>
   </StrictMode>,
 )

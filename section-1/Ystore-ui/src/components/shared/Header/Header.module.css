@@ -157,6 +157,14 @@
   transition: 0.3s ease-in-out;
 }
 
+.navLink.active {
+  color: var(--hover-color);
+  background-color: var(--bg-hover-color);
+  border-radius: 0.375rem;
+  color: #ffffff;
+  transition: 0.3s ease-in-out;
+}
+
 .navLink:active,
 .link:active {
   color: var(--active-color);

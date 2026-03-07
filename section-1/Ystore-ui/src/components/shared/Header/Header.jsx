@@ -4,6 +4,7 @@ import styles from "./Header.module.css";
 import ThemeToggle from "./themeToogle/ThemeToggle";
 import { useMobileMenu } from "../../../hooks/products/useMobileMenu";
 import { faBars, faWindowClose } from "@fortawesome/free-solid-svg-icons";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
   const { isOpen, toggleMenu, closeMenu } = useMobileMenu();
@@ -40,34 +41,36 @@ const Header = () => {
                   <FontAwesomeIcon icon={faWindowClose} />
               </button>
             </li>
-
             <li>
-              <a href="/home" className={styles.navLink}>
-                Home
-              </a>
-            </li>
-            <li>
-              <a href="/about" className={styles.navLink}>
+              <NavLink to="/about" className={({isActive}) =>{
+                return isActive ? `${styles.navLink} ${styles.active}` : styles.navLink;
+              }}>
                 About
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a href="/contact" className={styles.navLink}>
+              <NavLink to="/contact" className={({isActive}) =>{
+                return isActive ? `${styles.navLink} ${styles.active}` : styles.navLink;
+              }}>
                 Contact
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a href="/login" className={styles.navLink}>
+              <NavLink to="/login" className={({isActive}) =>{
+                return isActive ? `${styles.navLink} ${styles.active}` : styles.navLink;
+              }}>
                 Login
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a href="/cart" className={styles.navLink}>
+              <NavLink to="/cart" className={({isActive}) =>{
+                return isActive ? `${styles.navLink} ${styles.active}` : styles.navLink;
+              }}>
                 <FontAwesomeIcon
                   icon={faShoppingBasket}
                   className={styles.cartIcon}
                 />
-              </a>
+              </NavLink>
             </li>
             <li>
               <ThemeToggle />
