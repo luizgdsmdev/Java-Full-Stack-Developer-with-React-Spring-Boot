@@ -205,3 +205,23 @@
 .brandIcon{
   color: var(--primary-color);
 }
+
+.menuIconContainer{
+  width: 100dvw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.5rem;
+}
+
+.buttonCloseMenuMobile{
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: block;
+  font-size: 2rem;
+  color: var(--primary-color);
+}

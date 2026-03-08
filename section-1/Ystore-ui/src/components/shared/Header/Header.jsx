@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from "./Header.module.css";
 import ThemeToggle from "./themeToogle/ThemeToggle";
 import { useMobileMenu } from "../../../hooks/products/useMobileMenu";
-import { faBars, faWindowClose } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faXmark} from "@fortawesome/free-solid-svg-icons";
 import { NavLink } from "react-router-dom";
 
 const Header = () => {
@@ -12,10 +12,10 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <div className={styles.container}>
-        <a href="/" className={styles.link}>
+        <NavLink to="/" className={styles.link}>
           <FontAwesomeIcon icon={faTags} className={styles.brandIcon} />
           <span className={styles.brandTitle}>Ystore</span>
-        </a>
+        </NavLink>
 
         <button
           className={styles.menuButton}
@@ -29,17 +29,19 @@ const Header = () => {
         <nav className={`${styles.nav} ${isOpen ? styles.open : ""} ${isClosing ? styles.close : ""}`}>
           <ul>
             <li className={styles.menuIconMobile}>
-              <div>
-                <FontAwesomeIcon icon={faTags} className={styles.brandIcon} />
-                <span className={styles.brandTitle}>Ystore</span>
+              <div className={styles.menuIconContainer}>
+                <div>
+                  <FontAwesomeIcon icon={faTags} className={styles.brandIcon} />
+                  <span className={styles.brandTitle}>Ystore</span>
+                </div>
+                <button
+                    className={styles.buttonCloseMenuMobile}
+                    onClick={() => {
+                      closeMenu();
+                    }}>
+                    <FontAwesomeIcon icon={faXmark} />
+                </button>
               </div>
-              <button
-                  className={styles.menuButton}
-                  onClick={() => {
-                    closeMenu();
-                  }}>
-                  <FontAwesomeIcon icon={faWindowClose} />
-              </button>
             </li>
             <li>
               <NavLink onClick={closeMenu} to="/about" className={({isActive}) =>{
