@@ -7,7 +7,7 @@ import { faBars, faWindowClose } from "@fortawesome/free-solid-svg-icons";
 import { NavLink } from "react-router-dom";
 
 const Header = () => {
-  const { isOpen, toggleMenu, closeMenu } = useMobileMenu();
+  const { isOpen, isClosing, toggleMenu, closeMenu } = useMobileMenu();
 
   return (
     <header className={styles.header}>
@@ -26,7 +26,7 @@ const Header = () => {
         </button>
 
 
-        <nav className={`${styles.nav} ${isOpen ? styles.open : ""}`}>
+        <nav className={`${styles.nav} ${isOpen ? styles.open : ""} ${isClosing ? styles.close : ""}`}>
           <ul>
             <li className={styles.menuIconMobile}>
               <div>
@@ -42,28 +42,28 @@ const Header = () => {
               </button>
             </li>
             <li>
-              <NavLink to="/about" className={({isActive}) =>{
+              <NavLink onClick={closeMenu} to="/about" className={({isActive}) =>{
                 return isActive ? `${styles.navLink} ${styles.active}` : styles.navLink;
               }}>
                 About
               </NavLink>
             </li>
             <li>
-              <NavLink to="/contact" className={({isActive}) =>{
+              <NavLink onClick={closeMenu} to="/contact" className={({isActive}) =>{
                 return isActive ? `${styles.navLink} ${styles.active}` : styles.navLink;
               }}>
                 Contact
               </NavLink>
             </li>
             <li>
-              <NavLink to="/login" className={({isActive}) =>{
+              <NavLink onClick={closeMenu} to="/login" className={({isActive}) =>{
                 return isActive ? `${styles.navLink} ${styles.active}` : styles.navLink;
               }}>
                 Login
               </NavLink>
             </li>
             <li>
-              <NavLink to="/cart" className={({isActive}) =>{
+              <NavLink onClick={closeMenu} to="/cart" className={({isActive}) =>{
                 return isActive ? `${styles.navLink} ${styles.active}` : styles.navLink;
               }}>
                 <FontAwesomeIcon
@@ -78,9 +78,9 @@ const Header = () => {
           </ul>
         </nav>
       </div>
-      {isOpen && (
+      {(isOpen || isClosing) && (
         <div
-          className={`${styles.overlay} ${styles.open}`}
+          className={`${styles.overlay} ${isOpen ? styles.open : ""} ${isClosing ? styles.close : ""}`}
           onClick={closeMenu}
         />
       )}
