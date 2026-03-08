@@ -7,7 +7,7 @@ import NotFundTextMessage from './notFundTextMessage/NotFundTextMessage'
 
 function PageNotFund() {
   return (
-    <div className={styles.homeContainer}>
+    <div className={styles.homeContainerNotFundPage }>
     <Header />
     <div className={styles.notFundContentContainer}>
       <SvgComponents />

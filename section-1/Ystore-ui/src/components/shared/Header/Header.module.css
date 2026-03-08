@@ -67,7 +67,7 @@
   transform: translateY(0);
   opacity: 1;
   pointer-events: auto;
-  height: 100vh;
+  height: 100dvh;
   transition: all 0.6s ease-in-out;
   transform: translateY(0);
   font-weight: bold;

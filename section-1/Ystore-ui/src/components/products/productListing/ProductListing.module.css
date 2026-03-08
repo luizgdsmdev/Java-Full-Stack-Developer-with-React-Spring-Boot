@@ -4,14 +4,14 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding: 1rem;
-  max-width: 100%;
+  max-width: 100dvw;
+  overflow-x: hidden;
 }
 
 .productListingsContainer {
   max-width: 95%;
   margin: 0 auto;
-  padding: 2rem 1.5rem;
+  /* padding: 2rem 1.5rem; */
 }
 
 .productListingsGrid {
@@ -25,3 +25,21 @@
   justify-content: center;
   align-items: center;
 }
+
+@media (max-width: 768px) {
+  .listingsContainer {
+    max-width: 100dvw;
+  }
+
+  .productListingsGrid{
+    gap: 1.5rem 0rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .listingsContainer {
+    max-width: 85dvw;
+  }
+}
+
+

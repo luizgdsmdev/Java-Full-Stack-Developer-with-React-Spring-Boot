@@ -35,9 +35,22 @@
   margin-bottom: 0.5rem;
 }
 
+@media (min-width: 425px) {
+  .productCard {
+    width: 21rem;
+  }
+}
+
+
+@media (min-width: 768px) {
+  .productCard {
+    width: 21rem;
+  }
+}
+
 @media (min-width: 1024px) {
   .productCard {
-    width: 28rem;
+    width: 18rem;
   }
 }
 
