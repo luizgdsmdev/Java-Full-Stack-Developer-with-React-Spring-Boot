@@ -58,3 +58,6 @@ target/
 *.trace.db
 *.db
 *.db.*
+
+# Local environment files
+application-local.properties
