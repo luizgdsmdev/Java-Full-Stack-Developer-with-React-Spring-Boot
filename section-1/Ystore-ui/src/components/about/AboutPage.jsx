@@ -46,7 +46,7 @@ const AboutPage = () => {
             whileHover={{ scale: 1.05 }}
             className={styles.featureCard}
           >
-            <h3>⭐ High Quality</h3>
+            <h3>High Quality</h3>
             <p>
               Our stickers are printed on resistant materials,
               durable and with vibrant colors.
@@ -58,7 +58,7 @@ const AboutPage = () => {
             whileHover={{ scale: 1.05 }}
             className={styles.featureCard}
           >
-            <h3>🎨 Big Variety</h3>
+            <h3>Big Variety</h3>
             <p>
               Designs for all tastes: minimalists, geeks,
               fun, artistic and more.
@@ -70,7 +70,7 @@ const AboutPage = () => {
             whileHover={{ scale: 1.05 }}
             className={styles.featureCard}
           >
-            <h3>💡 Creativity</h3>
+            <h3>Creativity</h3>
             <p>
               New designs are added regularly bringing
               creative ideas.
