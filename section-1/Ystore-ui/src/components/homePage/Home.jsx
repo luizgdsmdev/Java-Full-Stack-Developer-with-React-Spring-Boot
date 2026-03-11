@@ -4,11 +4,20 @@ import ProductListing from "../products/productListing/ProductListing";
 import Loading from "../shared/loading/Loading";
 import Error from "../shared/error/Error";
 import NoProductsMessage from "../products/productListing/NoProductsMessage";
-
-import { useProducts } from "../../hooks/products/productsQueryFetch";
+import { useLoaderData } from "react-router-dom";
+import { useQuery } from '@tanstack/react-query';
+import { fetchProductsAPI } from "../../API/product/ProductFetch";
 
 const Home = () => {
-  const { data: products = [], isLoading, isError, error } = useProducts();
+  // Get initial data from loader
+  const initialData = useLoaderData();
+  
+  // Use React Query for caching and refetching, with initial data from loader
+  const { data: products = [], isLoading, isError, error } = useQuery({
+    queryKey: ['products'],
+    queryFn: fetchProductsAPI,
+    initialData: initialData,
+  });
 
   if (isLoading) {
     return <Loading />;

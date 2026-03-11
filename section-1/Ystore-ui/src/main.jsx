@@ -10,6 +10,7 @@ import Login from './components/login/Login.jsx';
 import Cart from './components/cart/Cart.jsx';
 import Home from './components/homePage/Home.jsx';
 import PageNotFund from './components/pageNotFund/PageNotFund.jsx';
+import { fetchProductsAPI } from './API/product/ProductFetch.js';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -21,6 +22,12 @@ const queryClient = new QueryClient({
   },
 });
 
+// Loader for home page to fetch products
+const homeLoader = async () => {
+  const products = await fetchProductsAPI();
+  return products;
+};
+
 const reactRouter = createBrowserRouter([
   {
     path: "/",
@@ -30,6 +37,7 @@ const reactRouter = createBrowserRouter([
       {
         index: true,
         element: <Home />,
+        loader: homeLoader,
       },
       {
         path: "/about",
