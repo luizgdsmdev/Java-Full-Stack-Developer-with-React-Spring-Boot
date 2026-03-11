@@ -36,12 +36,12 @@ const Contact = () => {
         <motion.form variants={item} className={styles.form}>
           <div className={styles.inputGroup}>
             <label>Name</label>
-            <input type="text" placeholder="John Doe" className={styles.inputNameContact} required />
+            <input type="text" placeholder="John Doe" className={styles.inputNameContact} required maxLength={100} minLength={10} />
           </div>
 
           <div className={styles.inputGroup}>
             <label>Email</label>
-            <input type="email" placeholder="john.doe@email.com" required />
+            <input type="email" placeholder="john.doe@email.com" required maxLength={100} minLength={10} />
           </div>
 
           <div className={styles.inputGroup}>
@@ -50,6 +50,8 @@ const Contact = () => {
               rows="5"
               placeholder="Write your message..."
               required
+              maxLength={600}
+              minLength={15}
             />
           </div>
 
