@@ -57,11 +57,14 @@ label{
   border: 2px solid var(--primary-color);
   font-size: 1rem;
   transition: border 0.2s, box-shadow 0.2s;
+  color: var(--text-lights);
+  background-color: transparent;
 }
 
 input, textarea{
   background-color: transparent;
-  color: var(--text-dark);
+  color: var(--text-lights);
+  background-color: transparent;
 }
 
 .inputNameContact{
