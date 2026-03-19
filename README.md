@@ -1,5 +1,7 @@
 # Ystore - Full Stack E-commerce Application
 
+> **⚠️ Development Status**: This project is currently under development. New features and improvements are being actively developed. Please check the issues and projects sections to see what's being worked on.
+
 A comprehensive full-stack e-commerce platform built with modern Spring Boot backend and React frontend, demonstrating enterprise-grade development practices and scalable architecture patterns.
 
 ## Project Overview
